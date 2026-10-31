@@ -38,14 +38,14 @@ jobs:
 
       - name: Create work directory
         run: |
-          mkdir "$HOME/Arduino"
+          mkdir -p "$HOME/Arduino/libraries"
           ln -s "$PWD" "$HOME/Arduino/FM-DX-Tuner"
 
       - name: Install platform and libraries
         run: |
           arduino-cli core update-index --additional-urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
           arduino-cli core install ${{ matrix.arduino-platform }} --additional-urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
-          arduino-cli lib install "Adafruit TinyUSB Library"
+          git clone https://github.com/hathach/tinyusb.git "$HOME/Arduino/libraries/tinyusb"
 
       - name: Compile Sketch
         run: arduino-cli compile --fqbn "${{ matrix.fqbn }}" "$HOME/Arduino/FM-DX-Tuner" --warnings more --output-dir ./build-artifacts
