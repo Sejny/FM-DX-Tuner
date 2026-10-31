@@ -18,7 +18,7 @@
 #ifdef ARDUINO_ARCH_AVR
 #include <avr/pgmspace.h>
 #else
-//#include <pgmspace.h>
+#include <pgmspace.h>
 #endif
 #include "Bandwidth.hpp"
 
