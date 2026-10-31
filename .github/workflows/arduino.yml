@@ -45,7 +45,22 @@ jobs:
         run: |
           arduino-cli core update-index --additional-urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
           arduino-cli core install ${{ matrix.arduino-platform }} --additional-urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
+          
+          # Naklonování raw TinyUSB stacku
           git clone https://github.com/hathach/tinyusb.git "$HOME/Arduino/libraries/tinyusb"
+          
+          # Umělé vytvoření metadat, aby arduino-cli knihovnu poznalo
+          cat <<EOF > "$HOME/Arduino/libraries/tinyusb/library.properties"
+          name=tinyusb
+          version=0.15.0
+          author=hathach
+          maintainer=hathach
+          sentence=TinyUSB stack
+          paragraph=Open source cross-platform USB stack
+          category=Communication
+          url=https://github.com/hathach/tinyusb
+          architectures=*
+          EOF
 
       - name: Compile Sketch
         run: arduino-cli compile --fqbn "${{ matrix.fqbn }}" "$HOME/Arduino/FM-DX-Tuner" --warnings more --output-dir ./build-artifacts
