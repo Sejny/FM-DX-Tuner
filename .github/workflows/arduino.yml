@@ -16,7 +16,7 @@ jobs:
         arduino-platform: 
            #- "arduino:avr"
            #- "esp32:esp32"
-          - "STMicroelectronics:stm32"
+          - "STMicroelectronics:stm32@2.8.0"
         include:
            #- arduino-platform: "arduino:avr"
              #fqbn: "arduino:avr:diecimila"
