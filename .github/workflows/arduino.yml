@@ -14,13 +14,13 @@ jobs:
     strategy:
       matrix:
         arduino-platform: 
-          - "arduino:avr"
+           #- "arduino:avr"
           - "esp32:esp32"
           - "STMicroelectronics:stm32"
         include:
-          - arduino-platform: "arduino:avr"
-            fqbn: "arduino:avr:diecimila"
-            artifact-name: "avr-diecimila"
+           #- arduino-platform: "arduino:avr"
+             #fqbn: "arduino:avr:diecimila"
+             #artifact-name: "avr-diecimila"
           - arduino-platform: "esp32:esp32"
             fqbn: "esp32:esp32:esp32"
             artifact-name: "esp32"
