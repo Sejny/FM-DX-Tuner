@@ -25,7 +25,7 @@ jobs:
             #fqbn: "esp32:esp32:esp32"
             #artifact-name: "esp32"
           - arduino-platform: "STMicroelectronics:stm32@2.7.0"
-            fqbn: "STMicroelectronics:stm32:GenF0:pnum=GENERIC_F072C8TX,opt=o3std"
+            fqbn: "STMicroelectronics:stm32:GenF0:pnum=GENERIC_F072CBTX,opt=o3std"
             artifact-name: "stm32f072"
 
     runs-on: ubuntu-latest
