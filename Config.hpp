@@ -48,26 +48,26 @@
 /* -------------------------------------------------------------------------
    LED configuration
    ----------------------------------------------------------------------- */
-#define LED_ENABLED 0
+#define LED_ENABLED 1
 
-#define LED_COUNT 1
-#define LED_PINS 13
+#define LED_COUNT 2
+#define LED_PINS PA15, PA8
 
-#define LED_ID_POWER 0
-//#define LED_ID_COMMAND 1
+#define LED_ID_POWER   0
+#define LED_ID_COMMAND 1
 /* ----------------------------------------------------------------------- */
 
 
 /* -----------------------------------------------------------------------
    Antenna switch configuration
    ----------------------------------------------------------------------- */
-#define ANTENNA_ENABLED 0
+#define ANTENNA_ENABLED 1
 
 /* Antenna driver (available drivers: Antenna, AntennaBCD) */
-#define ANTENNA_DRIVER Antenna
+#define ANTENNA_DRIVER AntennaBCD
 
-#define ANTENNA_COUNT 4
-#define ANTENNA_PINS  8, 9, 10, 11
+#define ANTENNA_COUNT 2
+#define ANTENNA_PINS  PB6
 
 /* Delay of the antenna switch [miliseconds] */
 #define ANTENNA_SWITCH_DELAY 50
@@ -77,9 +77,9 @@
 /* -----------------------------------------------------------------------
    Rotator controller configuration
    ----------------------------------------------------------------------- */
-#define ROTATOR_ENABLED 0
-#define ROTATOR_PIN_CW  6
-#define ROTATOR_PIN_CCW 7
+#define ROTATOR_ENABLED 1
+#define ROTATOR_PIN_CW  PB4
+#define ROTATOR_PIN_CCW PB5
 
 /* Automatic rotator stop after specified time [seconds] */
 #define ROTATOR_TIMEOUT 90
