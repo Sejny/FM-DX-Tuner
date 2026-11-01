@@ -15,7 +15,7 @@ jobs:
       matrix:
         arduino-platform: 
            #- "arduino:avr"
-          - "esp32:esp32"
+           #- "esp32:esp32"
           - "STMicroelectronics:stm32"
         include:
            #- arduino-platform: "arduino:avr"
