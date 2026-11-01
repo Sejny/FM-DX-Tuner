@@ -47,12 +47,12 @@ jobs:
           arduino-cli core install ${{ matrix.arduino-platform }} --additional-urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
           
           # Naklonování raw TinyUSB stacku
-          git clone --branch 0.12.0 --depth 1 https://github.com/hathach/tinyusb.git "$HOME/Arduino/libraries/tinyusb"
+          git clone --branch 0.13.0 --depth 1 https://github.com/hathach/tinyusb.git "$HOME/Arduino/libraries/tinyusb"
           
           # Umělé vytvoření metadat, aby arduino-cli knihovnu poznalo
           cat <<EOF > "$HOME/Arduino/libraries/tinyusb/library.properties"
           name=tinyusb
-          version=0.12.0
+          version=0.13.0
           author=hathach
           maintainer=hathach
           sentence=TinyUSB stack
