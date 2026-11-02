@@ -77,7 +77,7 @@
 /* -----------------------------------------------------------------------
    Rotator controller configuration
    ----------------------------------------------------------------------- */
-#define ROTATOR_ENABLED 1
+#define ROTATOR_ENABLED 0
 #define ROTATOR_PIN_CW  PB4
 #define ROTATOR_PIN_CCW PB5
 
