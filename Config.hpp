@@ -31,8 +31,8 @@
 /* -----------------------------------------------------------------------
    Audio configuration
    ----------------------------------------------------------------------- */
-#define AUDIO_I2S_ENABLED true
-#define AUDIO_I2S_MASTER true
+#define AUDIO_I2S_ENABLED false
+#define AUDIO_I2S_MASTER false
 /* ----------------------------------------------------------------------- */
 
 
