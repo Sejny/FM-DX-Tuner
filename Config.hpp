@@ -12,7 +12,7 @@
 /* Typical values: 100 kHz (100000L) or 400 kHz (400000L)
    Reduce speed to decrease interference (for bad PCB design) or when
    capacitors are added to the bus lines (the speed is limited) */
-#define TUNER_I2C_CLOCK 100000L
+#define TUNER_I2C_CLOCK 400000L
 
 /* I2C pull-ups in Arduino AVR driver */
 /* Enable only on Arduino boards modified to 3.3V operation
