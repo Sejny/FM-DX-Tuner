@@ -1,4 +1,4 @@
-name: Arduino Build
+name: Headless TEF
 
 on:
   push:
